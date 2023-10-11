@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AdminMiddleware
@@ -16,6 +17,12 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
+        if ((int) auth()->user()->role !== User::ROLE_ADMIN) {
+
+            abort(404);
+
+        }
+
         // auth()->user()->name;
 
         return $next($request);
