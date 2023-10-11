@@ -39,6 +39,17 @@
                 @error('password')
                 <div class="text-danger">Поле обязательно для заполнения</div>
                 @enderror
+                <div class="form-group w-50">
+                  <label>Выберите роль</label>
+                  <select class="form-control" name="role">
+                    @foreach($roles as $id => $role)
+                    <option value="{{ $id }}" {{ $id == old('role_id') ? 'selected' : '' }}>{{ $role }}</option>
+                    @endforeach
+                  </select>
+                  @error('role')
+                  <div class="text-danger">{{ $message }}</div>
+                  @enderror
+                </div>
                 <br>
                 <input type="submit" class="btn btn-block btn-primary" value="Добавить">
               </div>
