@@ -34,11 +34,11 @@
                 @error('email')
                 <div class="text-danger">Поле обязательно для заполнения</div>
                 @enderror
-                <label>Пароль</label>
+                <!-- <label>Пароль</label>
                 <input type="text" class="form-control" name="password" placeholder="Пароль пользователя">
                 @error('password')
                 <div class="text-danger">Поле обязательно для заполнения</div>
-                @enderror
+                @enderror -->
                 <div class="form-group w-50">
                   <label>Выберите роль</label>
                   <select class="form-control" name="role">
