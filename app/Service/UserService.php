@@ -3,6 +3,7 @@
 namespace App\Service;
 
 use App\Models\User;
+use App\Jobs\StoreUserJob;
 use App\Mail\User\PasswordMail;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\DB;
@@ -19,11 +20,7 @@ class UserService
 		try{
             DB::beginTransaction();
 
-            $password = Str::random(10);
-            $data['password'] = Hash::make($password);
-            $user = User::firstOrCreate(['email' => $data['email']], $data);
-            Mail::to($data['email'])->send(new PasswordMail($password));
-            event(new Registered($user));
+            StoreUserJob::dispatch($data);
 
             DB::commit();
         } catch(\Exception $exception) {
