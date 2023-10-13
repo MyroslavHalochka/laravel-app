@@ -12,7 +12,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="{{ route('admin.main.index') }}">Главная</a></li>
               <li class="breadcrumb-item active">Теги</li>
             </ol>
           </div><!-- /.col -->
@@ -38,8 +38,8 @@
                     <thead>
                       <tr>
                         <th>ID</th>
-                        <th>Title</th>
-                        <th colspan="3" class="text-center">Action</th>
+                        <th>Заголовок</th>
+                        <th colspan="3" class="text-center">Действия</th>
                       </tr>
                     </thead>
                     <tbody>

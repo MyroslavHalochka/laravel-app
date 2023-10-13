@@ -8,12 +8,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">статьи</h1>
+            <h1 class="m-0">Статьи</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">статьи</li>
+              <li class="breadcrumb-item"><a href="{{ route('admin.main.index') }}">Главная</a></li>
+              <li class="breadcrumb-item active">Cтатьи</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -38,8 +38,8 @@
                     <thead>
                       <tr>
                         <th>ID</th>
-                        <th>Title</th>
-                        <th colspan="3" class="text-center">Action</th>
+                        <th>Заголовок</th>
+                        <th colspan="3" class="text-center">Действия</th>
                       </tr>
                     </thead>
                     <tbody>
